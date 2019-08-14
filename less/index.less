@@ -168,7 +168,7 @@ header {
   flex-flow: column nowrap;
   align-items: center;
   height: 10vh;
-  justify-content: flex-end;
+  justify-content: center;
 
   nav {
     display: flex;
@@ -178,6 +178,10 @@ header {
 
     a {
       font-family: @copy;
+
+      &:hover {
+        color: red;
+      }
     }
   }
 }
@@ -245,20 +249,23 @@ main {
 
 section#projects .container {
   display: flex;
-  flex-flow: row wrap;
-  align-items: flex-start;
+  flex-direction: column;
   height: 100vh;
 
   .work-text {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     font-family: @title;
     font-size: 2rem;
+    height: 10vh;
   }
 
   .work-recent {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 100%;
 
     .flex-child {
       width: 30%; //Change me!
