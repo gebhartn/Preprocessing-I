@@ -131,30 +131,59 @@ table {
   margin: 0;
   padding: 0;
   max-width: 100%;
+  font-size: 62.5%;
+  text-decoration: none;
   background: snow;
   color: #373d3f;
 }
 #wrapper {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
-.container {
-  display: flex;
-}
-@media (max-width: 500px) {
-  .container {
-    flex-flow: column nowrap;
-  }
-}
-.container .flex-child {
+header {
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
 }
-#footer {
+header nav {
   display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  flex-flow: row nowrap;
 }
-@media (max-width: 500px) {
-  #footer .container {
-    flex-flow: row wrap;
-  }
+main .container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+main .container .photo {
+  width: 30%;
+  background-color: green;
+}
+main .container .about {
+  width: 70%;
+  background-color: blue;
+}
+section .container {
+  border: 1px solid black;
+  display: flex;
+  flex-flow: column wrap;
+}
+section .container .work-text {
+  display: flex;
+  justify-content: center;
+}
+section .container .work-recent {
+  display: flex;
+  justify-content: space-between;
+}
+section .container .work-recent .flex-child {
+  width: 30%;
+}
+section .container .work-recent .flex-child h2 {
+  margin-bottom: 5%;
+  text-align: center;
+}
+section .container .work-recent .flex-child p {
+  text-align: justify;
+  font-family: "Lato", sans-serif;
 }
