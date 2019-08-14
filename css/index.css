@@ -170,12 +170,12 @@ main .container h1 {
   margin-bottom: 2%;
 }
 main .container h2 {
-  color: #708090;
+  color: #a9a9a9;
   font-size: 2.7rem;
   font-family: "Vollkorn", serif;
 }
 main .container p {
-  color: #708090;
+  color: #a9a9a9;
   font-size: 1.7rem;
   line-height: 3rem;
   font-family: "Lato", sans-serif;
