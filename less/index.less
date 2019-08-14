@@ -152,8 +152,8 @@ body {
 // Color variables
 @bg: snow;
 @fg: #373d3f;
-@light: linen;
-@dark: #a9a9a9; // This color sucks
+@light: aquamarine;
+@dark: aquamarine;
 
 // Mixins
 
@@ -169,7 +169,9 @@ header {
   flex-flow: column nowrap;
   align-items: center;
   height: 10vh;
-  justify-content: flex-end;
+  justify-content: center;
+  // background-color: whitesmoke;
+  // border-bottom: 1px solid rgb(233, 233, 233);
 
   nav {
     display: flex;
@@ -179,9 +181,13 @@ header {
 
     a {
       font-family: @copy;
+      display: flex;
+      height: 10vh;
+      align-items: center;
 
       &:hover {
-        color: red;
+        border-top: 1vh solid @light;
+        transform: translateY(-0.55vh);
       }
     }
   }
@@ -241,12 +247,11 @@ main {
   .button {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 10vh;
   }
 }
 
-// Section styling
 .arrow {
   display: inline-block;
   width: 25px;
@@ -254,7 +259,14 @@ main {
   border-top: 2px solid @fg;
   border-right: 2px solid @fg;
   transform: rotate(135deg);
+
+  &:hover {
+    border-top: 3px solid @light;
+    border-right: 3px solid @light;
+  }
 }
+
+// Section styling
 
 section#projects .container {
   display: flex;
@@ -295,6 +307,7 @@ section#projects .container {
       p {
         text-align: justify;
         font-family: @copy;
+        line-height: 1.5rem;
       }
 
       img {
