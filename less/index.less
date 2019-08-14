@@ -168,7 +168,7 @@ header {
   flex-flow: column nowrap;
   align-items: center;
   height: 10vh;
-  justify-content: center;
+  justify-content: flex-end;
 
   nav {
     display: flex;
@@ -184,10 +184,11 @@ header {
 
 // Hero styling
 main .container {
+  width: 100%;
   margin-top: 3%;
   display: flex;
   flex-flow: row nowrap;
-  height: 90vh;
+  height: 80vh;
 
   h1 {
     font-size: 6rem;
@@ -219,16 +220,34 @@ main .container {
   }
 
   .about {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
     padding: 5%;
     width: 60%;
   }
 }
 
-// Section styling
-section .container {
+main {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   height: 90vh;
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+  }
+}
+
+// Section styling
+
+section#projects .container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  height: 100vh;
 
   .work-text {
     display: flex;

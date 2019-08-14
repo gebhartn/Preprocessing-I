@@ -147,7 +147,7 @@ header {
   flex-flow: column nowrap;
   align-items: center;
   height: 10vh;
-  justify-content: center;
+  justify-content: flex-end;
 }
 header nav {
   display: flex;
@@ -159,10 +159,11 @@ header nav a {
   font-family: "Lato", sans-serif;
 }
 main .container {
+  width: 100%;
   margin-top: 3%;
   display: flex;
   flex-flow: row nowrap;
-  height: 90vh;
+  height: 80vh;
 }
 main .container h1 {
   font-size: 6rem;
@@ -190,34 +191,49 @@ main .container .photo {
   justify-content: center;
 }
 main .container .about {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
   padding: 5%;
   width: 60%;
 }
-section .container {
+main {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   height: 90vh;
 }
-section .container .work-text {
+main .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+section#projects .container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  height: 100vh;
+}
+section#projects .container .work-text {
   display: flex;
   justify-content: center;
   font-family: "Vollkorn", serif;
   font-size: 2rem;
 }
-section .container .work-recent {
+section#projects .container .work-recent {
   display: flex;
   justify-content: space-between;
 }
-section .container .work-recent .flex-child {
+section#projects .container .work-recent .flex-child {
   width: 30%;
 }
-section .container .work-recent .flex-child h2 {
+section#projects .container .work-recent .flex-child h2 {
   margin-bottom: 5%;
   text-align: center;
   font-family: "Vollkorn", serif;
   font-size: 1.7rem;
 }
-section .container .work-recent .flex-child p {
+section#projects .container .work-recent .flex-child p {
   text-align: justify;
   font-family: "Lato", sans-serif;
 }
