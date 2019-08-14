@@ -131,6 +131,30 @@ table {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  background-color: snow;
+  background: snow;
   color: #373d3f;
+}
+#wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+.container {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .container {
+    flex-flow: column nowrap;
+  }
+}
+.container .flex-child {
+  display: flex;
+  flex-flow: column nowrap;
+}
+#footer {
+  display: flex;
+}
+@media (max-width: 500px) {
+  #footer .container {
+    flex-flow: row wrap;
+  }
 }

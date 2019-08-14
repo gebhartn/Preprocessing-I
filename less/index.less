@@ -135,7 +135,7 @@ table {
   margin: 0;
   padding: 0;
   max-width: 100%;
-  background-color: @bg;
+  background: @bg;
   color: @fg;
 }
 
@@ -148,3 +148,30 @@ table {
 @fg: #373d3f;
 @light: linen;
 @dark: #708090;
+
+// Flex
+
+#wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  @media (max-width: 500px) {
+    flex-flow: column nowrap;
+  }
+  .flex-child {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+#footer {
+  display: flex;
+  .container {
+    @media (max-width: 500px) {
+      flex-flow: row wrap;
+    }
+  }
+}
