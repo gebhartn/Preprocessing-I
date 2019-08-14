@@ -135,6 +135,8 @@ table {
   margin: 0;
   padding: 0;
   max-width: 100%;
+  font-size: 62.5%;
+  text-decoration: none;
   background: @bg;
   color: @fg;
 }
@@ -149,29 +151,69 @@ table {
 @light: linen;
 @dark: #708090;
 
-// Flex
-
+// Wrapper styling
 #wrapper {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 
-.container {
+// Nav styling
+header {
   display: flex;
-  @media (max-width: 500px) {
-    flex-flow: column nowrap;
-  }
-  .flex-child {
+  flex-flow: column nowrap;
+  align-items: center;
+
+  nav {
     display: flex;
-    flex-flow: column nowrap;
+    width: 60%;
+    justify-content: space-evenly;
+    flex-flow: row nowrap;
   }
 }
 
-#footer {
+// Hero styling
+main .container {
   display: flex;
-  .container {
-    @media (max-width: 500px) {
-      flex-flow: row wrap;
+  flex-flow: row nowrap;
+
+  .photo {
+    width: 30%;
+    background-color: green;
+  }
+
+  .about {
+    width: 70%;
+    background-color: blue;
+  }
+}
+
+// Section styling
+section .container {
+  border: 1px solid black;
+  display: flex;
+  flex-flow: column wrap;
+
+  .work-text {
+    display: flex;
+    justify-content: center;
+  }
+
+  .work-recent {
+    display: flex;
+    justify-content: space-between;
+
+    .flex-child {
+      width: 30%; //Change me!
+
+      h2 {
+        margin-bottom: 5%;
+        text-align: center;
+      }
+
+      p {
+        text-align: justify;
+        font-family: @copy;
+      }
     }
   }
 }
