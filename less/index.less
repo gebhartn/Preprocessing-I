@@ -138,6 +138,7 @@ table {
   font-size: 62.5%;
   text-decoration: none;
   color: @fg;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -246,6 +247,14 @@ main {
 }
 
 // Section styling
+.arrow {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid @fg;
+  border-right: 2px solid @fg;
+  transform: rotate(135deg);
+}
 
 section#projects .container {
   display: flex;

@@ -134,6 +134,7 @@ table {
   font-size: 62.5%;
   text-decoration: none;
   color: #373d3f;
+  scroll-behavior: smooth;
 }
 body {
   background: snow;
@@ -210,6 +211,14 @@ main .button {
   justify-content: center;
   align-items: center;
   height: 10vh;
+}
+.arrow {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid #373d3f;
+  border-right: 2px solid #373d3f;
+  transform: rotate(135deg);
 }
 section#projects .container {
   display: flex;
