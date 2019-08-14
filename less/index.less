@@ -154,6 +154,8 @@ body {
 @light: linen;
 @dark: #a9a9a9; // This color sucks
 
+// Mixins
+
 // Wrapper styling
 #wrapper {
   width: 70%;
@@ -165,7 +167,8 @@ header {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-top: 3%;
+  height: 10vh;
+  justify-content: center;
 
   nav {
     display: flex;
@@ -184,6 +187,7 @@ main .container {
   margin-top: 3%;
   display: flex;
   flex-flow: row nowrap;
+  height: 90vh;
 
   h1 {
     font-size: 6rem;
@@ -209,6 +213,9 @@ main .container {
   .photo {
     padding: 5%;
     width: 40%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
 
   .about {
@@ -221,10 +228,13 @@ main .container {
 section .container {
   display: flex;
   flex-flow: column wrap;
+  height: 90vh;
 
   .work-text {
     display: flex;
     justify-content: center;
+    font-family: @title;
+    font-size: 2rem;
   }
 
   .work-recent {
@@ -237,6 +247,8 @@ section .container {
       h2 {
         margin-bottom: 5%;
         text-align: center;
+        font-family: @title;
+        font-size: 1.7rem;
       }
 
       p {

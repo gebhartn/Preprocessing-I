@@ -146,7 +146,8 @@ header {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-top: 3%;
+  height: 10vh;
+  justify-content: center;
 }
 header nav {
   display: flex;
@@ -161,6 +162,7 @@ main .container {
   margin-top: 3%;
   display: flex;
   flex-flow: row nowrap;
+  height: 90vh;
 }
 main .container h1 {
   font-size: 6rem;
@@ -183,6 +185,9 @@ main .container p {
 main .container .photo {
   padding: 5%;
   width: 40%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 main .container .about {
   padding: 5%;
@@ -191,10 +196,13 @@ main .container .about {
 section .container {
   display: flex;
   flex-flow: column wrap;
+  height: 90vh;
 }
 section .container .work-text {
   display: flex;
   justify-content: center;
+  font-family: "Vollkorn", serif;
+  font-size: 2rem;
 }
 section .container .work-recent {
   display: flex;
@@ -206,6 +214,8 @@ section .container .work-recent .flex-child {
 section .container .work-recent .flex-child h2 {
   margin-bottom: 5%;
   text-align: center;
+  font-family: "Vollkorn", serif;
+  font-size: 1.7rem;
 }
 section .container .work-recent .flex-child p {
   text-align: justify;
