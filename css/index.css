@@ -247,7 +247,7 @@ main .button-container {
 section#projects .container {
   display: flex;
   flex-direction: column;
-  height: 94.5vh;
+  height: 94vh;
   justify-content: center;
   align-items: center;
 }
@@ -259,7 +259,6 @@ section#projects .container .button-contaier {
 }
 section#projects .container .work-text {
   display: flex;
-  justify-content: center;
   align-items: flex-end;
   font-family: "Vollkorn", serif;
   font-size: 2.7rem;
@@ -269,7 +268,8 @@ section#projects .container .work-recent {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 90vh;
+  height: 80vh;
+  padding: 5%;
 }
 section#projects .container .work-recent .flex-child {
   padding: 1%;
@@ -288,6 +288,11 @@ section#projects .container .work-recent .flex-child p {
   text-align: justify;
   font-family: "Lato", sans-serif;
   line-height: 1.6rem;
+}
+section#about .container {
+  height: 105vh;
+  display: flex;
+  background-color: red;
 }
 footer .container {
   display: flex;

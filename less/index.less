@@ -278,17 +278,17 @@ main {
 section#projects .container {
   display: flex;
   flex-direction: column;
-  height: 94.5vh;
+  height: 94vh;
   justify-content: center;
   align-items: center;
 
   .button-contaier {
+    height: 10vh;
     .myButton();
   }
 
   .work-text {
     display: flex;
-    justify-content: center;
     align-items: flex-end;
     font-family: @title;
     font-size: @medium;
@@ -299,7 +299,8 @@ section#projects .container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    height: 90vh;
+    height: 80vh;
+    padding: 5%;
 
     .flex-child {
       padding: 1%;
@@ -322,6 +323,14 @@ section#projects .container {
       }
     }
   }
+}
+
+// About styling
+
+section#about .container {
+  height: 105vh;
+  display: flex;
+  background-color: red;
 }
 
 // Footer styling
