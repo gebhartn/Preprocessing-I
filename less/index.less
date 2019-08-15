@@ -277,58 +277,55 @@ main {
 
 section#projects .container {
   display: flex;
-  flex-direction: column;
-  height: 94vh;
-  justify-content: center;
-  align-items: center;
-
-  .button-contaier {
-    height: 10vh;
-    .myButton();
-  }
+  flex-flow: column nowrap;
 
   .work-text {
-    display: flex;
-    align-items: flex-end;
-    font-family: @title;
-    font-size: @medium;
     height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-family: @title;
+      font-size: @medium;
+    }
   }
 
   .work-recent {
+    height: 70vh;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    height: 80vh;
-    padding: 5%;
+    justify-content: space-evenly;
 
     .flex-child {
-      padding: 1%;
       display: flex;
-      flex-flow: column wrap;
-      width: 35%; //Change me!
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 30%;
 
       h2 {
-        margin-top: 4%;
-        margin-bottom: 4%;
-        text-align: center;
-        font-family: @title;
+        font-family: @copy;
         font-size: @small;
       }
 
       p {
         text-align: justify;
         font-family: @copy;
-        line-height: @body;
+        font-size: 1.3rem;
+        line-height: 2rem;
       }
     }
+  }
+  .button-container {
+    .myButton();
   }
 }
 
 // About styling
 
 section#about .container {
-  height: 105vh;
+  height: 100vh;
   display: flex;
   background-color: red;
 }
