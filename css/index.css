@@ -139,6 +139,27 @@ table {
 body {
   background: snow;
 }
+*::selection {
+  background: #61feba;
+}
+.myButton {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 10vh;
+}
+.arrow {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid #373d3f;
+  border-right: 2px solid #373d3f;
+  transform: rotate(135deg);
+}
+.arrow:hover {
+  border-top: 2px solid #61feba;
+  border-right: 2px solid #61feba;
+}
 #wrapper {
   width: 70%;
   margin: 0 auto;
@@ -163,8 +184,9 @@ header nav a {
   align-items: center;
 }
 header nav a:hover {
-  border-top: 1vh solid aquamarine;
+  border-top: 1vh solid #61feba;
   transform: translateY(-0.55vh);
+  color: slategray;
 }
 main .container {
   width: 100%;
@@ -181,15 +203,9 @@ main .container h1 {
   margin-bottom: 2%;
 }
 main .container h2 {
-  color: aquamarine;
+  color: slategray;
   font-size: 2.7rem;
   font-family: "Vollkorn", serif;
-}
-main .container p {
-  color: aquamarine;
-  font-size: 1.7rem;
-  line-height: 3rem;
-  font-family: "Lato", sans-serif;
 }
 main .container .photo {
   padding: 5%;
@@ -210,13 +226,13 @@ main {
   flex-flow: column nowrap;
   height: 90vh;
 }
-main .button {
+main .button-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   height: 10vh;
 }
-.arrow {
+.button {
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -224,40 +240,46 @@ main .button {
   border-right: 2px solid #373d3f;
   transform: rotate(135deg);
 }
-.arrow:hover {
-  border-top: 3px solid aquamarine;
-  border-right: 3px solid aquamarine;
+.button:hover {
+  border-top: 2px solid #61feba;
+  border-right: 2px solid #61feba;
 }
 section#projects .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 94.5vh;
+  justify-content: center;
+  align-items: center;
+}
+section#projects .container .button-contaier {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 10vh;
 }
 section#projects .container .work-text {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   font-family: "Vollkorn", serif;
-  font-size: 2rem;
-  height: 10vh;
+  font-size: 2.7rem;
+  height: 20vh;
 }
 section#projects .container .work-recent {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 100%;
+  align-items: flex-start;
+  height: 90vh;
 }
 section#projects .container .work-recent .flex-child {
-  padding: 2%;
-  border-top: 2px solid aquamarine;
+  padding: 1%;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
+  width: 35%;
 }
 section#projects .container .work-recent .flex-child h2 {
-  margin-bottom: 5%;
+  margin-top: 4%;
+  margin-bottom: 4%;
   text-align: center;
   font-family: "Vollkorn", serif;
   font-size: 1.7rem;
@@ -265,16 +287,25 @@ section#projects .container .work-recent .flex-child h2 {
 section#projects .container .work-recent .flex-child p {
   text-align: justify;
   font-family: "Lato", sans-serif;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
 }
 footer .container {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
+footer .container small {
+  font-family: "Lato", sans-serif;
+  color: slategray;
+  font-size: 0.7em;
+}
 footer .container .icon-container {
   display: flex;
   flex-flow: row nowrap;
   width: 25%;
   justify-content: space-evenly;
+  margin: 5% 0;
+}
+footer .container .icon-container i {
+  font-size: 2rem;
 }

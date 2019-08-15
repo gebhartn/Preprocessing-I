@@ -145,17 +145,45 @@ body {
   background: @bg;
 }
 
+*::selection {
+  background: #61feba;
+}
+
 // Font variables
 @title: "Vollkorn", serif;
 @copy: "Lato", sans-serif;
+@large: 6rem;
+@medium: 2.7rem;
+@small: 1.7rem;
+@body: 1.6rem;
 
 // Color variables
 @bg: snow;
 @fg: #373d3f;
-@light: aquamarine;
-@dark: aquamarine;
+@light: #61feba;
+@dark: slategray;
 
 // Mixins
+.myButton {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 10vh;
+}
+
+.arrow {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-top: 2px solid @fg;
+  border-right: 2px solid @fg;
+  transform: rotate(135deg);
+
+  &:hover {
+    border-top: 2px solid @light;
+    border-right: 2px solid @light;
+  }
+}
 
 // Wrapper styling
 #wrapper {
@@ -170,8 +198,6 @@ header {
   align-items: center;
   height: 10vh;
   justify-content: center;
-  // background-color: whitesmoke;
-  // border-bottom: 1px solid rgb(233, 233, 233);
 
   nav {
     display: flex;
@@ -188,6 +214,7 @@ header {
       &:hover {
         border-top: 1vh solid @light;
         transform: translateY(-0.55vh);
+        color: @dark;
       }
     }
   }
@@ -202,7 +229,7 @@ main .container {
   height: 80vh;
 
   h1 {
-    font-size: 6rem;
+    font-size: @large;
     letter-spacing: 0.2rem;
     color: @fg;
     font-family: @title;
@@ -211,15 +238,8 @@ main .container {
 
   h2 {
     color: @dark;
-    font-size: 2.7rem;
+    font-size: @medium;
     font-family: @title;
-  }
-
-  p {
-    color: @dark;
-    font-size: 1.7rem;
-    line-height: 3rem;
-    font-family: @copy;
   }
 
   .photo {
@@ -244,26 +264,13 @@ main {
   flex-flow: column nowrap;
   height: 90vh;
 
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 10vh;
+  .button-container {
+    .myButton();
   }
 }
 
-.arrow {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  border-top: 2px solid @fg;
-  border-right: 2px solid @fg;
-  transform: rotate(135deg);
-
-  &:hover {
-    border-top: 3px solid @light;
-    border-right: 3px solid @light;
-  }
+.button {
+  .arrow();
 }
 
 // Section styling
@@ -271,47 +278,47 @@ main {
 section#projects .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 94.5vh;
+  justify-content: center;
+  align-items: center;
+
+  .button-contaier {
+    .myButton();
+  }
 
   .work-text {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     font-family: @title;
-    font-size: 2rem;
-    height: 10vh;
+    font-size: @medium;
+    height: 20vh;
   }
 
   .work-recent {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 100%;
+    align-items: flex-start;
+    height: 90vh;
 
     .flex-child {
-      padding: 2%;
-      border-top: 2px solid @light;
+      padding: 1%;
       display: flex;
       flex-flow: column wrap;
-      justify-content: center;
-      align-items: center;
-      width: 30%; //Change me!
+      width: 35%; //Change me!
 
       h2 {
-        margin-bottom: 5%;
+        margin-top: 4%;
+        margin-bottom: 4%;
         text-align: center;
         font-family: @title;
-        font-size: 1.7rem;
+        font-size: @small;
       }
 
       p {
         text-align: justify;
         font-family: @copy;
-        line-height: 1.5rem;
-      }
-
-      img {
-        // background-color: red;
+        line-height: @body;
       }
     }
   }
@@ -324,10 +331,21 @@ footer .container {
   flex-flow: column nowrap;
   align-items: center;
 
+  small {
+    font-family: @copy;
+    color: @dark;
+    font-size: 0.7em;
+  }
+
   .icon-container {
     display: flex;
     flex-flow: row nowrap;
     width: 25%;
     justify-content: space-evenly;
+    margin: 5% 0;
+
+    i {
+      font-size: 2rem;
+    }
   }
 }
