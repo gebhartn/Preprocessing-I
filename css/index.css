@@ -354,7 +354,7 @@ footer .container .icon-container i {
 }
 #resume .container {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
 }
@@ -399,6 +399,13 @@ footer .container .icon-container i {
 #resume .container .content .text-container p {
   text-align: justify;
   font-family: "Lato", sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 2rem;
+}
+#resume .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 10vh;
+  transform: rotate(180deg);
 }
