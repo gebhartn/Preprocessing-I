@@ -210,9 +210,12 @@ main .container h2 {
 main .container .photo {
   padding: 5%;
   width: 40%;
-  display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
+  display: flex;
+}
+main .container .photo i {
+  font-size: 12rem;
 }
 main .container .about {
   display: flex;
@@ -351,42 +354,51 @@ footer .container .icon-container i {
 }
 #resume .container {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 #resume .container .title {
   width: 100%;
   display: flex;
-  height: 10vh;
+  height: 15vh;
   justify-content: center;
   align-items: flex-end;
+  margin-bottom: 5vh;
 }
 #resume .container .title h1 {
   font-family: "Vollkorn", serif;
   font-size: 2.7rem;
 }
-#resume .container .hero {
+#resume .container .content {
   height: 33%;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-#resume .container .hero .image-container {
+#resume .container .content .image-container {
   display: flex;
   width: 33.3%;
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
 }
-#resume .container .hero .text-container {
+#resume .container .content .image-container i {
+  font-size: 4rem;
+}
+#resume .container .content .text-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   width: 66.7%;
 }
-#resume .container .hero .text-container h2 {
-  font-family: "Vollkorn", serif;
-  font-size: 2.7rem;
+#resume .container .content .text-container h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.7rem;
+}
+#resume .container .content .text-container p {
+  text-align: justify;
+  font-family: "Lato", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2rem;
 }
